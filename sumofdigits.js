@@ -3,8 +3,8 @@ const fs = require('fs');
 fs.readFile('number.txt', 'utf8', (err, data) => {
     if (err) 
     {
-        console.error('Error reading the file:', err);
-       
+       console.error('Error reading the file:', err);
+       return;
     }
 
   
@@ -18,6 +18,6 @@ fs.readFile('number.txt', 'utf8', (err, data) => {
         number = Math.sqrt(number / 10);  
     }
 
-    
+    console.log(`Sum of digits: ${sum}`);
     console.log(`Sum of digits: ${sum}`);
 });
